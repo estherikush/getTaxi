@@ -1,5 +1,7 @@
 package com.esthere.gettaxi1.model.entities;
 
+import android.location.Location;
+
 import java.sql.Time;
 
 public class Ride {
@@ -8,8 +10,8 @@ public class Ride {
         BUSY,
         FINISHED
     }
-    private String targetLocation;
-    private String sourceLocation;
+    private Location targetLocation;
+    private Location sourceLocation;
     private Status status;
     private Time timeRide;
     private boolean arrivingOrLeaving;
@@ -17,13 +19,14 @@ public class Ride {
     private String phone;
     private String email;
 //constructors
-    public Ride(String targetLocation, String sourceLocation, Status status) {
+    public Ride(){}
+    public Ride(Location targetLocation, Location sourceLocation, Status status) {
         this.targetLocation = targetLocation;
         this.sourceLocation = sourceLocation;
         this.status = status;
     }
 
-    public Ride(String targetLocation, String sourceLocation,boolean arrivingOrLeaving, Time timeRide, String name, String phone, String email) {
+    public Ride(Location targetLocation, Location sourceLocation,boolean arrivingOrLeaving, Time timeRide, String name, String phone, String email) {
         this.targetLocation = targetLocation;
         this.sourceLocation = sourceLocation;
         this.status = Status.AVAILABLE;
@@ -37,19 +40,19 @@ public class Ride {
     }
 
     //getters &setters
-    public String getTargetLocation() {
+    public Location getTargetLocation() {
         return targetLocation;
     }
 
-    public void setTargetLocation(String targetLocation) {
+    public void setTargetLocation(Location targetLocation) {
         this.targetLocation = targetLocation;
     }
 
-    public String getSourceLocation() {
+    public Location getSourceLocation() {
         return sourceLocation;
     }
 
-    public void setSourceLocation(String sourceLocation) {
+    public void setSourceLocation(Location sourceLocation) {
         this.sourceLocation = sourceLocation;
     }
 
