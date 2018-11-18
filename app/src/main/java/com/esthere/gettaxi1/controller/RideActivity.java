@@ -39,7 +39,15 @@ public class RideActivity extends Activity {
         int hour=((TimePicker) findViewById(R.id.timeRide)).getHour();
         int minute=((TimePicker) findViewById(R.id.timeRide)).getMinute();
         Time time=new Time(hour,minute,0);
-        Ride ride = new Ride(null, null, !((RadioButton) findViewById(R.id.rbLeaving)).isChecked(), time, name.getText().toString(), phone.getText().toString(), email.getText().toString());
+        Ride ride = new Ride();//(null, null, !((RadioButton) findViewById(R.id.rbLeaving)).isChecked(), time, name.getText().toString(), phone.getText().toString(), email.getText().toString());
+        ride.setName(name.getText().toString());
+        ride.setPhone(phone.getText().toString());
+        ride.setEmail(email.getText().toString());
+        ride.setArrivingOrLeaving(!((RadioButton) findViewById(R.id.rbLeaving)).isChecked());
+        //ride.setSourceLocation();
+        //ride.setTargetLocation();
+        ride.setTimeRide(time);
+
         Globals.backend.addRide(ride);
 
         // Write a message to the database https://gett-9a48c.firebaseio.com/

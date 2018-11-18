@@ -67,12 +67,15 @@
         <!--android:layout_height="wrap_content" />-->
 
     <Button
+        android:id="@+id/btnShowLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Show Location"
-        android:id="@+id/btnShowLocation"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="114dp" />
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="44dp"
+        android:text="Show Location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

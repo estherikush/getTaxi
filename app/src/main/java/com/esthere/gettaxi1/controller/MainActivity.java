@@ -133,11 +133,11 @@ public class MainActivity extends Activity {
         //Toast toast=new Toast(task.isComplete());
 
         Ride ride1 =new Ride();
-        ride1.setEmail("lll@jk");
+        ride1.setEmail("123456789@jk");
         ride1.setStatus(Ride.Status.AVAILABLE);
         ride1.setPhone("090788778");
         ride1.setName("lll");
-        DatabaseReference newRef = myRef.child("Person").push();
+        DatabaseReference newRef = myRef.child("pperson").push();
         newRef.setValue(ride1);
 
 

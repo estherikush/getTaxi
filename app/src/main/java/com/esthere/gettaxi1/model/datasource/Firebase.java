@@ -1,5 +1,8 @@
 package com.esthere.gettaxi1.model.datasource;
 
+import android.widget.RadioButton;
+
+import com.esthere.gettaxi1.R;
 import com.esthere.gettaxi1.model.backend.IBackend;
 import com.esthere.gettaxi1.model.entities.Driver;
 import com.esthere.gettaxi1.model.entities.Ride;
@@ -39,12 +42,21 @@ public class Firebase implements IBackend {
 //myRef.child("ride1").setValue(ride);
         //DatabaseReference myRef1=myRef.child("ride1");
         //myRef1.push().setValue(ride);
+
+
         Ride ride1 =new Ride();
-        ride.setEmail("lll@jk");
-        ride.setStatus(Ride.Status.AVAILABLE);
-        ride.setPhone("090788778");
-        ride.setName("lll");
-        myRef.push().setValue(ride1);
+        ride1.setEmail(ride.getEmail());
+        ride1.setStatus(Ride.Status.AVAILABLE);
+        ride1.setPhone(ride.getPhone());
+        ride1.setName(ride.getName());
+        ride1.setArrivingOrLeaving(ride.isArrivingOrLeaving());
+        //ride1.setTimeRide(ride.getTimeRide());
+
+        DatabaseReference newRef = myRef.push();
+       //DatabaseReference newRef = myRef.child("ride").push();
+        newRef.setValue(ride1);
         //myRef1.setValue(ride);
+
+
     }
 }
