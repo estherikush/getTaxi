@@ -32,6 +32,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="email"
+            android:drawableLeft="@android:drawable/ic_dialog_email"
             android:inputType="textEmailAddress" />
 
         <EditText
@@ -40,6 +41,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="phone"
+            android:drawableLeft="@android:drawable/stat_sys_phone_call"
             android:inputType="phone" />
 
         <AutoCompleteTextView
