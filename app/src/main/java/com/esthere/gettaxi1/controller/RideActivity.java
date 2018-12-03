@@ -29,8 +29,8 @@ public class RideActivity extends Activity {
         email = (EditText) findViewById(R.id.emailCostumer);
         name = (EditText) findViewById(R.id.nameCostumer);
         phone = (EditText) findViewById(R.id.phoneCostumer);
-        sourceL = (EditText) findViewById(R.id.sourceLocation);
-        destinationL = (EditText) findViewById(R.id.targetLocation);
+        //sourceL = (EditText) findViewById(R.id.sourceLocation);
+        //destinationL = (EditText) findViewById(R.id.targetLocation);
         //leaveT= (EditText) findViewById(R.id.leaveTime);
         //destinationT = (EditText) findViewById(R.id.arriveTime);
     }

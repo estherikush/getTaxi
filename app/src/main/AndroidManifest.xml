@@ -30,7 +30,8 @@
         <activity
             android:name=".controller.DriversActivity"
             android:label="@string/title_activity_drivers" />
-        <activity android:name=".controller.RideActivity" />
+        <activity android:name=".controller.RideActivity"
+            android:label="Add Ride"/>
         <activity
             android:name=".controller.LoginActivity2"
             android:label="@string/title_activity_login2" />
